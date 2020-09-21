@@ -22,7 +22,7 @@
   "author": "Kuray (FreakyCoder) <kurayogun@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p . && echo Build completed!",
+    "build": "tsc -p . && node dist/bin/generate-types.js && echo Build completed!",
     "watch": "tsc -p . --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.13",
+    "@types/node": "^14.11.1",
     "@types/react": "^16.9.22",
     "@types/react-native": "^0.63.0",
     "eslint": "^7.9.0",
@@ -44,6 +45,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "react-native-vector-icons": "^7.1.0",
+    "recast": "^0.20.3",
     "typescript": "^4.0.2"
   },
   "husky": {
